@@ -59,7 +59,15 @@ function App() {
             />
           )}
         />
-        <Route path="/checkout" component={CheckoutForm} />
+        <Route
+          path="/checkout" 
+          render={(props) => (
+            <CheckoutForm
+              {...props}
+              setCart={setCart}
+            />
+          )}
+        />
       </Router>
     </div>
   );
